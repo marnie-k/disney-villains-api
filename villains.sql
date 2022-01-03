@@ -1,8 +1,8 @@
 CREATE DATABASE disney;
 
-CREATE USER 'villains'@'localhost' IDENTIFIED EITH mysql_native_password BY 'Letme1n'
+CREATE USER 'villains'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Letme1n';
 
-GRANT ALL ONdisney.* TO 'villains'@'localhost';
+GRANT ALL ON disney.* TO 'villains'@'localhost';
 
 USE disney;
 
@@ -14,7 +14,7 @@ CREATE TABLE villains(
     createdAt DATETIME DEFAULT NOW(),
     updatedAt DATETIME DEAULT NOW() ON UPDATE NOW(),
     deletedAt DATETIME,
-    PRIMARY KEY(id),
+    PRIMARY KEY(id)
 );
 
 INSERT INTO villains(name, movie, slug) VALUES('Captain Hook', 'Peter Pan', 'captain-hook');
