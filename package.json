@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": ".node_modules/.bin/nodemon index.js",
-    "lint": ".node_modules/.bin/eslint --format codeframe .",
-    "lint:fix": ".node_modules/.bin/eslint --fix --format codeframe ."
+    "dev": "./node_modules/.bin/nodemon index.js",
+    "lint": "./node_modules/.bin/eslint --format codeframe .",
+    "lint:fix": "./node_modules/.bin/eslint --fix --format codeframe ."
   },
   "author": "",
   "license": "ISC",
