@@ -9,7 +9,7 @@ const {getAllVillains,
     const {mockVillainsList,
         mockVillain,
         addVillain,
-        addedVillainResp} = require('./mocks/villains')
+        addedVillainResp} = require('../mocks/villains') //error here?
 
     chai.use(sinonChai)
     const { expect } = chai
@@ -46,9 +46,12 @@ const {getAllVillains,
 
         describe('getAllVillains', () => { 
             it('list all villains and send JSON', async() => {
-                stubbedFindAll.return()
+                stubbedFindAll.returns(mockVillainsList)
 
                 await getAllVillains({}, response)
+
+                expect(stubbedFindAll).to.have.callCount(1)
+                expect(stubbedSend).to.have.been.calledWith(mockVillainsList)
             })   
         })
         describe('getVillainBySlug', () => {

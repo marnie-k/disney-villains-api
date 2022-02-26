@@ -30,7 +30,7 @@ const addedVillainResp = {
     slug: 'red-skull'
 }
 
-module.exports= {
+module.exports = {
     mockVillainsList, 
     mockVillain,
     addVillain,
